@@ -5,6 +5,23 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+
+// builder.Services.AddHttpClient("PersonalFinancesApiUri", c =>
+// {
+//     if (app.Environment.IsStaging())
+//     {
+//         c.BaseAddress = new Uri("http://localhost:5281/");
+//     }
+//     if (app.Environment.IsProduction())
+//     {
+//         c.BaseAddress = new Uri("http://localhost:5281/");
+//     }
+//     if (app.Environment.IsDevelopment())
+//     {
+//         c.BaseAddress = new Uri("http://localhost:5281/");
+//     }
+// });
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
