@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>@ViewData["Title"]</title>
+
+    <!-- notification -->
+    <link rel="stylesheet" type="text/css" href="~/assets/pages/notification/notification.css">
+    <script type="text/javascript" src="~/assets/pages/notification/notification.js" defer></script>
+
+    @RenderSection("header", required: false)
+
+</head>
+
+<body>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    @if (ViewBag.ErroMessage != null)
+    {
+        <script type="text/javascript">
+
+            window.onload = function(){
+                personalFinancesNotify("danger","@ViewBag.ErroMessage");
+            }
+
+        </script>
+       
+    }
+    
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>
