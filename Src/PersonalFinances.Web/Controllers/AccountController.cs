@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using PersonalFinances.Web.Models;
 
 namespace PersonalFinances.Web.Controllers
 {
@@ -21,6 +22,12 @@ namespace PersonalFinances.Web.Controllers
         {
             return View();
         }
+
+        // [HttpPost]
+        // public async Task<IActionResult> Login(LoginModel login)
+        // {
+
+        // }
 
         public IActionResult RecoverPassword()
         {
