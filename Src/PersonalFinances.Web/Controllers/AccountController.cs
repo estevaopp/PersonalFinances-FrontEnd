@@ -9,7 +9,7 @@ using PersonalFinances.Web.Models;
 
 namespace PersonalFinances.Web.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController : ControllerBase
     {
         private readonly ILogger<AccountController> _logger;
 
@@ -23,11 +23,11 @@ namespace PersonalFinances.Web.Controllers
             return View();
         }
 
-        // [HttpPost]
-        // public async Task<IActionResult> Login(LoginModel login)
-        // {
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginModel login)
+        {
 
-        // }
+        }
 
         public IActionResult RecoverPassword()
         {
@@ -40,5 +40,8 @@ namespace PersonalFinances.Web.Controllers
         {
             return View("Error!");
         }
+
+
+        
     }
 }
