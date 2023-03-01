@@ -11,11 +11,9 @@ namespace PersonalFinances.Web.Controllers
 {
     public class AccountController : ControllerBase
     {
-        private readonly ILogger<AccountController> _logger;
-
-        public AccountController(ILogger<AccountController> logger)
+        public AccountController() : base(ILogger<AccountController> logger)
         {
-            _logger = logger;
+            
         }
 
         public IActionResult Login()
